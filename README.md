@@ -1,46 +1,117 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Task-Planner Application
 
-## Available Scripts
+## Documentation
 
-In the project directory, you can run:
+[Documentation](https://linktodocumentation)
 
-### `npm start`
+This is a Task Manager application built using React and TypeScript. The application provides functionality to manage a list of tasks, including adding, editing, deleting, and filtering tasks. It uses Material-UI for the design and includes a simple alert system to notify users of actions taken on the tasks.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+##Components
+  1) App Component
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+The main component that holds the state and functions for managing tasks.
+Uses Material-UI's Container for layout.
+Manages tasks and alert state.
+Handles adding, updating, deleting, and filtering tasks.
 
-### `npm test`
+2) TaskForm Component
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+A form for adding and editing tasks.
+Receives addTask, updateTask, and editingTask as props.
 
-### `npm run build`
+3) TaskList Component
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Displays the list of tasks.
+Receives tasks, updateTask, and deleteTask as props.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+4) TaskFilter Component
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Provides an input field to filter tasks based on a query.
+Calls filterTasks function passed as a prop to update the displayed task list.
 
-### `npm run eject`
+5) AlertMessage Component
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Shows alert messages for task actions like adding, updating, and deleting.
+Receives open, onClose, severity, and message as props
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## State Management
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- tasks: Holds the list of all tasks.
+- filteredTasks: Manages the list of tasks displayed based on the filter.
+- editingTask: Stores the task currently being edited.
+- alert: Manages the alert's visibility and message.
+## Features
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+-Add Tasks: Users can add new tasks with a title and description.
+-Edit Tasks: Existing tasks can be edited to update their details.
+-Delete Tasks: Users can remove tasks from the list.
+-Filter Tasks: The application allows filtering tasks based on the title or description.
+-Alert System: Provides feedback to the user with success, info, and warning alerts.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Roadmap
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+ Dependencies
+ 
+ - React
+- TypeScript
+- Material-UI
+
+File Structure
+
+- App.tsx: The main component managing the application.
+- components/: Contains all reusable components like TaskForm, TaskList, and TaskFilter.
+- types.ts: Defines the TypeScript types used in the application.
+- TaskManager.css: Custom styles for the application.
+
+
+## Deployment
+
+How to Run
+
+1-Clone the repository.
+2-Install the dependencies using npm install or yarn.
+3-Start the development server using npm start or yarn start.
+4-Open the application in your browser at http://localhost:3000.
+```
+
+
+## Optimizations
+
+Future Enhancements
+
+- Add task prioritization and categorization.
+- Implement a more sophisticated search/filter system.
+- Add due dates and notifications for tasks.
+
+
+## Usage/Examples
+
+How to Use
+
+- Add a Task: Use the form at the top to add a new task with a title and description.
+- Edit a Task: Click the edit button next to a task to modify its details.
+- Delete a Task: Click the delete button next to a task to remove it.
+- Filter Tasks: Use the filter input to search tasks by title or description.
+
+
+## Authors
+
+- SANJEET SINGH
+
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+## Contributing
+
+Contributions are always welcome!
+Feel free to contribute to the project by submitting a pull request or reporting any issues!
+
+See `contributing.md` for ways to get started.
+
+Please adhere to this project's `code of conduct`.
+
